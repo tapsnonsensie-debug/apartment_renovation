@@ -3,6 +3,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
   root: '.',
+  base: '/apartment_renovation/',
   publicDir: 'public',
   build: {
     outDir: 'dist',
