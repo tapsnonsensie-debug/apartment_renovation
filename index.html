@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Квадрат+ — Ремонт квартир под ключ в Санкт-Петербурге</title>
+  <meta name="description" content="Ремонт квартир под ключ в Санкт-Петербурге. Прозрачная смета, фиксированные сроки, авторский надзор. Рассчитайте стоимость онлайн.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Onest:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script type="module" src="/src/js/main.js"></script>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="header" id="top">
+  <div class="container">
+    <div class="header__inner">
+      <a href="/" class="header__logo" aria-label="Квадрат+ — на главную">
+        <span class="header__logo-mark" aria-hidden="true">К+</span>
+        <span>Квадрат+</span>
+      </a>
+
+      <nav class="header__nav" aria-label="Основная навигация">
+        <a href="#advantages">Преимущества</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#stages">Этапы</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="tel:+78123859211" class="header__phone">+7 (812) 385-92-11</a>
+        <button class="btn btn--primary" data-modal-open="calc">Рассчитать стоимость</button>
+      </div>
+
+      <button class="header__burger" data-burger aria-expanded="false" aria-label="Открыть меню" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<nav class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true" aria-label="Мобильная навигация">
+  <button class="mobile-menu__close" data-mobile-close aria-label="Закрыть меню">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="mobile-menu__nav">
+    <a href="#advantages">Преимущества</a>
+    <a href="#portfolio">Портфолио</a>
+    <a href="#stages">Этапы работ</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contacts">Контакты</a>
+  </div>
+  <a href="tel:+78123859211" class="mobile-menu__phone">+7 (812) 385-92-11</a>
+  <button class="btn btn--primary" data-modal-open="calc" style="width:100%">Рассчитать стоимость</button>
+</nav>
+<div class="mobile-overlay" data-mobile-overlay aria-hidden="true"></div>
+
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <p class="section-label" aria-hidden="true">Санкт-Петербург</p>
+        <h1 class="hero__title">Ремонт квартиры<br><em>под ключ</em></h1>
+        <p class="hero__subtitle">Прозрачная смета, фиксированные сроки, авторский надзор. Работаем с новостройками и вторичкой.</p>
+        <div class="hero__cta">
+          <button class="btn btn--primary" data-modal-open="calc">Рассчитать стоимость</button>
+          <a href="#portfolio" class="btn btn--outline">Смотреть портфолио</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <div class="hero__stat-value">340+</div>
+            <div class="hero__stat-label">проектов сдано</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value">8 лет</div>
+            <div class="hero__stat-label">опыта в ремонте</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value">94%</div>
+            <div class="hero__stat-label">клиентов возвращаются</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__visual-img"><img src="/images/hero-living-room.png" alt="Гостиная после ремонта под ключ — Квадрат+" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg);display:block;"></div>
+        <div class="hero__visual-badge">
+          <div class="hero__visual-badge-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="hero__visual-badge-text">
+            Гарантия 3 года
+            <span>на все виды работ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== QUIZ ==================== -->
+<section class="quiz section" id="quiz">
+  <div class="container">
+    <div class="quiz__header">
+      <p class="section-label">Расчёт стоимости</p>
+      <h2 class="section-title">Узнайте примерную стоимость<br>вашего ремонта</h2>
+      <p class="section-subtitle">Ответьте на 5 вопросов — получите ориентировочную смету и консультацию специалиста</p>
+    </div>
+
+    <div class="quiz__card" data-quiz-card data-quiz>
+      <div class="quiz__progress" role="progressbar" aria-valuemin="1" aria-valuemax="5" aria-label="Прогресс квиза">
+        <div class="quiz__progress-bar" data-quiz-bar></div>
+        <div class="quiz__progress-bar" data-quiz-bar></div>
+        <div class="quiz__progress-bar" data-quiz-bar></div>
+        <div class="quiz__progress-bar" data-quiz-bar></div>
+        <div class="quiz__progress-bar" data-quiz-bar></div>
+      </div>
+
+      <p class="quiz__step-label" data-quiz-step-label>Шаг 1 из 5</p>
+
+      <div data-quiz-step></div>
+
+      <div class="quiz__status" data-quiz-status aria-live="polite"></div>
+      <div class="quiz__nav">
+        <button class="quiz__nav-back" data-quiz-back style="display:none" aria-label="Назад">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="quiz__nav-next" data-quiz-next disabled>Далее →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== ADVANTAGES ==================== -->
+<section class="advantages section" id="advantages">
+  <div class="container">
+    <p class="section-label">Почему Квадрат+</p>
+    <h2 class="section-title">Без сюрпризов — от сметы до сдачи</h2>
+    <p class="section-subtitle">Мы строим на доверии и прозрачности. Вы всегда знаете, что происходит на объекте.</p>
+
+    <div class="advantages__grid">
+
+      <div class="advantages__card">
+        <div class="advantages__card-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h3 class="advantages__card-title">Фиксированная смета</h3>
+        <p class="advantages__card-text">Цена закрепляется в договоре. Никаких доплат «по факту» — только согласованные изменения.</p>
+      </div>
+
+      <div class="advantages__card">
+        <div class="advantages__card-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3 class="advantages__card-title">Сроки в договоре</h3>
+        <p class="advantages__card-text">Срок сдачи фиксируем юридически. Нарушение — штраф в вашу пользу, прописанный в договоре.</p>
+      </div>
+
+      <div class="advantages__card">
+        <div class="advantages__card-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="advantages__card-title">Гарантия 3 года</h3>
+        <p class="advantages__card-text">Официальная гарантия на все виды работ. Выявленные дефекты устраняем за свой счёт.</p>
+      </div>
+
+      <div class="advantages__card">
+        <div class="advantages__card-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3 class="advantages__card-title">Авторский надзор</h3>
+        <p class="advantages__card-text">Прораб на объекте каждый день. Онлайн-отчёты с фото — вы видите прогресс без выезда.</p>
+      </div>
+
+      <div class="advantages__card">
+        <div class="advantages__card-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3 class="advantages__card-title">Поэтапная оплата</h3>
+        <p class="advantages__card-text">Оплата по этапам, а не весь бюджет авансом. Каждый этап закрывается актом приёма работ.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== PORTFOLIO ==================== -->
+<section class="portfolio section" id="portfolio">
+  <div class="container">
+    <div class="portfolio__header">
+      <div>
+        <p class="section-label">Наши работы</p>
+        <h2 class="section-title">Портфолио проектов</h2>
+      </div>
+      <a href="#quiz" class="btn btn--outline">Рассчитать свой проект</a>
+    </div>
+
+    <div class="portfolio__slider" data-portfolio-slider>
+      <div class="portfolio__track" data-portfolio-track>
+
+        <article class="portfolio__card" data-portfolio-card>
+          <div class="portfolio__card-images">
+            <div class="portfolio__card-img portfolio__card-img--before" data-ba="before">
+              <img src="/images/portfolio-1-before.png" alt="Новостройка до ремонта" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="portfolio__card-img portfolio__card-img--after" data-ba="after" style="opacity:0">
+              <img src="/images/portfolio-1-after.png" alt="Новостройка после ремонта" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="portfolio__card-toggle" role="group" aria-label="Переключение до/после">
+              <button data-ba-btn="before" class="is-active" aria-pressed="true">До</button>
+              <button data-ba-btn="after" aria-pressed="false">После</button>
+            </div>
+          </div>
+          <div class="portfolio__card-info">
+            <div class="portfolio__card-meta">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                Новостройка, 2-к
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                62 м²
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                3 месяца
+              </span>
+            </div>
+            <p class="portfolio__card-price">от 850 000 ₽</p>
+          </div>
+        </article>
+
+        <article class="portfolio__card" data-portfolio-card>
+          <div class="portfolio__card-images">
+            <div class="portfolio__card-img portfolio__card-img--before" data-ba="before">
+              <img src="/images/portfolio-2-before.png" alt="Вторичка до ремонта" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="portfolio__card-img portfolio__card-img--after" data-ba="after" style="opacity:0">
+              <img src="/images/portfolio-2-after.png" alt="Вторичка после ремонта" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="portfolio__card-toggle" role="group" aria-label="Переключение до/после">
+              <button data-ba-btn="before" class="is-active" aria-pressed="true">До</button>
+              <button data-ba-btn="after" aria-pressed="false">После</button>
+            </div>
+          </div>
+          <div class="portfolio__card-info">
+            <div class="portfolio__card-meta">
+              <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Вторичка, 3-к</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>78 м²</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>4,5 месяца</span>
+            </div>
+            <p class="portfolio__card-price">от 1 400 000 ₽</p>
+          </div>
+        </article>
+
+        <article class="portfolio__card" data-portfolio-card>
+          <div class="portfolio__card-images">
+            <div class="portfolio__card-img portfolio__card-img--before" data-ba="before">
+              <img src="/images/portfolio-3-before.png" alt="Студия до ремонта" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="portfolio__card-img portfolio__card-img--after" data-ba="after" style="opacity:0">
+              <img src="/images/portfolio-3-after.png" alt="Студия после ремонта" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="portfolio__card-toggle" role="group" aria-label="Переключение до/после">
+              <button data-ba-btn="before" class="is-active" aria-pressed="true">До</button>
+              <button data-ba-btn="after" aria-pressed="false">После</button>
+            </div>
+          </div>
+          <div class="portfolio__card-info">
+            <div class="portfolio__card-meta">
+              <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Студия</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>34 м²</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>2 месяца</span>
+            </div>
+            <p class="portfolio__card-price">от 480 000 ₽</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="portfolio__controls">
+      <button data-portfolio-prev aria-label="Предыдущий проект" disabled>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="portfolio__dots" data-portfolio-dots role="tablist" aria-label="Навигация по проектам"></div>
+      <button data-portfolio-next aria-label="Следующий проект">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== PRICE ==================== -->
+<section class="price section section--alt" id="price">
+  <div class="container">
+    <div class="price__inner">
+      <div class="price__content">
+        <p class="section-label">Как мы считаем цену</p>
+        <h2 class="section-title">Прозрачное ценообразование</h2>
+        <p class="section-subtitle">Стоимость зависит от типа работ, используемых материалов и сложности. Никаких скрытых наценок.</p>
+
+        <div class="price__list">
+          <div class="price__item">
+            <div class="price__item-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="price__item-text"><strong>Объём работ</strong>Считается по фактическим площадям после замера. Оплачиваете только то, что сделано.</div>
+          </div>
+          <div class="price__item">
+            <div class="price__item-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div class="price__item-text"><strong>Материалы по выбору</strong>Три пакета материалов: эконом, комфорт, премиум — или ваши собственные. Смета разбивается по каждой статье.</div>
+          </div>
+          <div class="price__item">
+            <div class="price__item-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="price__item-text"><strong>Без скрытых расходов</strong>Вывоз мусора, расходники и страховка бригады уже включены в базовую стоимость.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="price__visual">
+        <p class="section-label" style="margin-bottom: 24px;">Ориентировочный диапазон цен</p>
+        <div class="price__ranges">
+          <div class="price__range">
+            <div class="price__range-label">
+              <span class="price__range-name">Эконом</span>
+              <span class="price__range-value">от 4 500 ₽/м²</span>
+            </div>
+            <div class="price__range-bar-bg"><div class="price__range-bar-fill" style="width:40%"></div></div>
+          </div>
+          <div class="price__range">
+            <div class="price__range-label">
+              <span class="price__range-name">Комфорт</span>
+              <span class="price__range-value">от 8 900 ₽/м²</span>
+            </div>
+            <div class="price__range-bar-bg"><div class="price__range-bar-fill" style="width:65%"></div></div>
+          </div>
+          <div class="price__range">
+            <div class="price__range-label">
+              <span class="price__range-name">Дизайн-проект</span>
+              <span class="price__range-value">от 16 000 ₽/м²</span>
+            </div>
+            <div class="price__range-bar-bg"><div class="price__range-bar-fill" style="width:90%"></div></div>
+          </div>
+        </div>
+        <div class="price__note">
+          <p>Точная стоимость определяется после бесплатного замера и согласования сметы. Рассчитайте предварительно через квиз.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== STAGES ==================== -->
+<section class="stages section" id="stages">
+  <div class="container">
+    <p class="section-label">Как мы работаем</p>
+    <h2 class="section-title">5 этапов — от замера до сдачи</h2>
+
+    <div class="stages__track">
+
+      <div class="stages__step">
+        <div class="stages__step-num" aria-hidden="true">1</div>
+        <div class="stages__step-content">
+          <h3 class="stages__step-title">Замер и консультация</h3>
+          <p class="stages__step-text">Приезжаем на объект, снимаем точные замеры, обсуждаем ваши пожелания и особенности квартиры.</p>
+          <span class="stages__step-time">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            1 день
+          </span>
+        </div>
+      </div>
+
+      <div class="stages__step">
+        <div class="stages__step-num" aria-hidden="true">2</div>
+        <div class="stages__step-content">
+          <h3 class="stages__step-title">Детальная смета</h3>
+          <p class="stages__step-text">Готовим подробную смету по всем видам работ и материалов. Согласовываем с вами до подписания договора.</p>
+          <span class="stages__step-time">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            2–3 дня
+          </span>
+        </div>
+      </div>
+
+      <div class="stages__step">
+        <div class="stages__step-num" aria-hidden="true">3</div>
+        <div class="stages__step-content">
+          <h3 class="stages__step-title">Договор</h3>
+          <p class="stages__step-text">Фиксируем цену, сроки и гарантийные обязательства. Поэтапный график оплаты согласовывается индивидуально.</p>
+          <span class="stages__step-time">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            1 день
+          </span>
+        </div>
+      </div>
+
+      <div class="stages__step">
+        <div class="stages__step-num" aria-hidden="true">4</div>
+        <div class="stages__step-content">
+          <h3 class="stages__step-title">Производство работ</h3>
+          <p class="stages__step-text">Бригада работает по графику. Ежедневные отчёты с фото, прораб на объекте, онлайн-контроль прогресса.</p>
+          <span class="stages__step-time">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            По графику
+          </span>
+        </div>
+      </div>
+
+      <div class="stages__step">
+        <div class="stages__step-num" aria-hidden="true">5</div>
+        <div class="stages__step-content">
+          <h3 class="stages__step-title">Приёмка и гарантия</h3>
+          <p class="stages__step-text">Сдаём объект по чек-листу, подписываем акт. Гарантия 3 года — все дефекты устраняем бесплатно.</p>
+          <span class="stages__step-time">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            1 день
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== REVIEWS ==================== -->
+<section class="reviews section section--alt" id="reviews">
+  <div class="container">
+    <p class="section-label">Отзывы клиентов</p>
+    <h2 class="section-title">Нам доверяют свои квартиры</h2>
+
+    <div class="reviews__grid">
+
+      <article class="reviews__card">
+        <div class="reviews__card-stars" aria-label="Оценка 5 из 5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="reviews__card-text"><p>Делали ремонт под ключ в новостройке — 62 м². Смета не изменилась ни на рубль, сдали точно в срок. Прораб писал отчёты каждый день. Рекомендую без оговорок.</p></div>
+        <div class="reviews__card-author">
+          <div class="reviews__card-avatar" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <p class="reviews__card-name">Анна Коваленко</p>
+            <p class="reviews__card-meta">Санкт-Петербург, 2025</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="reviews__card">
+        <div class="reviews__card-stars" aria-label="Оценка 5 из 5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="reviews__card-text"><p>Взялись за старую трёшку в «сталинке». Убрали все старые стены, переделали проводку и сантехнику, сделали дизайн-проект. Результат превзошёл ожидания — жена в восторге.</p></div>
+        <div class="reviews__card-author">
+          <div class="reviews__card-avatar" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <p class="reviews__card-name">Дмитрий Михайлов</p>
+            <p class="reviews__card-meta">Санкт-Петербург, 2025</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="reviews__card">
+        <div class="reviews__card-stars" aria-label="Оценка 5 из 5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="reviews__card-text"><p>Студия 34 м² — казалось бы, несложно. Но именно здесь важна каждая деталь. Ребята предложили умные решения для хранения, и квартира стала ощущаться вдвое просторнее.</p></div>
+        <div class="reviews__card-author">
+          <div class="reviews__card-avatar" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <p class="reviews__card-name">Наталья Прохорова</p>
+            <p class="reviews__card-meta">Санкт-Петербург, 2025</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== FAQ ==================== -->
+<section class="faq section" id="faq">
+  <div class="container">
+    <div class="faq__inner">
+      <div>
+        <p class="section-label">Частые вопросы</p>
+        <h2 class="section-title">FAQ</h2>
+        <p class="section-subtitle">Отвечаем на самые частые вопросы. Не нашли ответ — звоните, это быстрее.</p>
+        <div style="margin-top: 28px;">
+          <a href="tel:+78123859211" class="btn btn--primary">+7 (812) 385-92-11</a>
+        </div>
+      </div>
+
+      <div class="faq__list">
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" aria-controls="faq-1" data-faq-btn>
+            Сколько времени занимает ремонт квартиры?
+            <span class="faq__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" id="faq-1" aria-hidden="true">
+            <div class="faq__answer-inner">Для студии от 32 м² — 1,5–2 месяца. Для 2-комнатной — 3–4 месяца. Для 3-комнатной — 4–6 месяцев. Точные сроки фиксируются в договоре и не могут быть изменены в одностороннем порядке.</div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" aria-controls="faq-2" data-faq-btn>
+            Нужно ли мне покупать материалы самому?
+            <span class="faq__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" id="faq-2" aria-hidden="true">
+            <div class="faq__answer-inner">Работаем с тремя пакетами: Эконом, Комфорт и Дизайн. Также принимаем материалы заказчика — в смете статьи разделены: работы отдельно, материалы отдельно.</div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" aria-controls="faq-3" data-faq-btn>
+            Может ли смета измениться после подписания?
+            <span class="faq__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" id="faq-3" aria-hidden="true">
+            <div class="faq__answer-inner">Смета фиксируется в договоре. Одностороннее изменение цены с нашей стороны невозможно. Если вы меняете объём работ — составляем дополнительное соглашение с новой суммой.</div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" aria-controls="faq-4" data-faq-btn>
+            Какая гарантия предоставляется на работы?
+            <span class="faq__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" id="faq-4" aria-hidden="true">
+            <div class="faq__answer-inner">Официальная гарантия 3 года на все виды работ. При обнаружении дефектов по нашей вине выезжаем и устраняем за свой счёт. Срок выезда по гарантии — не более 5 рабочих дней.</div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" aria-controls="faq-5" data-faq-btn>
+            Работаете ли вы в новостройках без отделки?
+            <span class="faq__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" id="faq-5" aria-hidden="true">
+            <div class="faq__answer-inner">Да, это наша основная специализация — около 60% загрузки. Работаем с квартирами без черновой отделки и с предчистовой. Координируемся с застройщиком по допуску бригады на объект.</div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" aria-controls="faq-6" data-faq-btn>
+            Нужно ли присутствовать на объекте во время ремонта?
+            <span class="faq__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" id="faq-6" aria-hidden="true">
+            <div class="faq__answer-inner">Нет. Прораб на объекте ежедневно, фотоотчёты присылаем каждый вечер. Приезжать можно в любое время без предупреждения — нам скрывать нечего.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== CTA BLOCK ==================== -->
+<section class="cta-block section" id="cta">
+  <div class="container">
+    <div class="cta-block__inner">
+      <div class="cta-block__content">
+        <p class="section-label">Бесплатный замер</p>
+        <h2 class="cta-block__title">Узнайте точную стоимость вашего ремонта</h2>
+        <p class="cta-block__text">Замерщик приедет в удобное время, снимет все размеры и подготовит детальную смету — бесплатно.</p>
+      </div>
+      <div class="cta-block__actions">
+        <button class="btn btn--outline" data-modal-open="calc">Рассчитать стоимость</button>
+        <a href="tel:+78123859211" class="btn" style="background-color: rgba(255,255,255,0.15); color: white; border: 1.5px solid rgba(255,255,255,0.3);">+7 (812) 385-92-11</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== CONTACTS ==================== -->
+<section class="contacts section" id="contacts">
+  <div class="container">
+    <p class="section-label">Как нас найти</p>
+    <h2 class="section-title">Контакты</h2>
+
+    <div class="contacts__inner">
+      <div class="contacts__card">
+        <h3 class="section-title" style="font-size: var(--text-xl); margin-bottom: 0;">Офис и шоурум</h3>
+        <div class="contacts__items">
+          <div class="contacts__item">
+            <div class="contacts__item-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <p class="contacts__item-label">Телефон</p>
+              <p class="contacts__item-value"><a href="tel:+78123859211">+7 (812) 385-92-11</a></p>
+            </div>
+          </div>
+          <div class="contacts__item">
+            <div class="contacts__item-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <p class="contacts__item-label">Email</p>
+              <p class="contacts__item-value"><a href="mailto:info@kvadratplus.ru">info@kvadratplus.ru</a></p>
+            </div>
+          </div>
+          <div class="contacts__item">
+            <div class="contacts__item-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <p class="contacts__item-label">Адрес офиса</p>
+              <p class="contacts__item-value">г. Санкт-Петербург,<br>Лиговский пр., 50, оф. 312</p>
+            </div>
+          </div>
+          <div class="contacts__item">
+            <div class="contacts__item-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div>
+              <p class="contacts__item-label">Режим работы</p>
+              <p class="contacts__item-value">Пн–Пт: 9:00–20:00<br>Сб: 10:00–18:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contacts__map" role="region" aria-label="Карта офиса">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?ll=30.3557%2C59.9297&z=16&pt=30.3557%2C59.9297%2Cpm2rdm&l=map"
+          style="width:100%;height:100%;min-height:420px;border:0;display:block;"
+          loading="lazy"
+          title="Офис Квадрат+ на карте — Лиговский пр., 50"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="/" class="header__logo" aria-label="Квадрат+ — на главную">
+          <span class="header__logo-mark" aria-hidden="true">К+</span>
+          <span>Квадрат+</span>
+        </a>
+        <p class="footer__desc">Ремонт квартир под ключ в Санкт-Петербурге. Прозрачная смета, фиксированные сроки, авторский надзор.</p>
+        <div class="footer__requisites">
+          <p>ООО «Квадрат Плюс»</p>
+          <p>ИНН 7804612345 &nbsp;·&nbsp; ОГРН 1187847182345</p>
+          <p>Юридический адрес: г. Санкт-Петербург, 191014, г. Санкт-Петербург, Лиговский пр., д. 50, оф. 312</p>
+        </div>
+      </div>
+
+      <div>
+        <p class="footer__col-title">Навигация</p>
+        <nav class="footer__nav" aria-label="Навигация в подвале">
+          <a href="#advantages">Преимущества</a>
+          <a href="#portfolio">Портфолио</a>
+          <a href="#price">Цены</a>
+          <a href="#stages">Этапы работ</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+      </div>
+
+      <div>
+        <p class="footer__col-title">Контакты</p>
+        <div class="footer__contacts">
+          <a href="tel:+78123859211">+7 (812) 385-92-11</a>
+          <a href="mailto:info@kvadratplus.ru">info@kvadratplus.ru</a>
+          <span>г. Санкт-Петербург,<br>Лиговский пр., 50, оф. 312</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2025 ООО «Квадрат Плюс». Все права защищены.</p>
+      <div class="footer__legal-links">
+        <a href="/legal/privacy.html">Политика конфиденциальности</a>
+        <a href="/legal/offer.html">Публичная оферта</a>
+        <a href="/legal/cookies.html">Политика Cookie</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ==================== MODAL: CALC ==================== -->
+<div class="modal-overlay" data-modal-overlay="calc" role="dialog" aria-modal="true" aria-labelledby="modal-calc-title">
+  <div class="modal" data-modal>
+    <button class="modal__close" data-modal-close aria-label="Закрыть форму">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <h2 class="modal__title" id="modal-calc-title">Рассчитать стоимость</h2>
+    <p class="modal__subtitle">Оставьте контакты — перезвоним в течение 30 минут и подготовим предварительный расчёт.</p>
+
+    <form class="modal__form" data-form="modal_calc" novalidate>
+      <div class="form-field">
+        <label for="modal-name">Ваше имя</label>
+        <input type="text" id="modal-name" name="name" placeholder="Иван" autocomplete="given-name" required>
+        <span class="form-field__error" data-error="name" role="alert">Введите имя (минимум 2 символа)</span>
+      </div>
+      <div class="form-field">
+        <label for="modal-phone">Телефон</label>
+        <input type="tel" id="modal-phone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+        <span class="form-field__error" data-error="phone" role="alert">Введите корректный номер телефона</span>
+      </div>
+      <label class="form-consent">
+        <input type="checkbox" name="consent" required>
+        Согласен с <a href="/legal/privacy.html" target="_blank">политикой конфиденциальности</a>
+      </label>
+      <div class="form-status" data-form-status aria-live="polite"></div>
+      <button type="submit" class="btn btn--primary" style="width:100%" disabled>Получить расчёт</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- ==================== COOKIE BANNER ==================== -->
+<div class="cookie-banner" data-cookie-banner role="dialog" aria-label="Уведомление об использовании cookie">
+  <p>Мы используем файлы cookie для улучшения работы сайта. Продолжая использовать сайт, вы соглашаетесь с <a href="/legal/cookies.html">политикой cookie</a>.</p>
+  <div class="cookie-banner__actions">
+    <button class="btn btn--primary" data-cookie-accept>Принять</button>
+    <button class="btn btn--ghost" data-cookie-decline>Отклонить</button>
+  </div>
+</div>
+
+
+<!-- ==================== SCROLL TO TOP ==================== -->
+<button class="scroll-top" data-scroll-top aria-label="Вернуться наверх">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

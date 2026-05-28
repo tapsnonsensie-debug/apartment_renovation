@@ -1,0 +1,57 @@
+:root {
+  // Colors
+  --color-bg:           #F8F5F0;
+  --color-surface:      #FFFFFF;
+  --color-surface-alt:  #F2EDE6;
+  --color-text:         #252320;
+  --color-text-muted:   #6A655D;
+  --color-accent:       #C4683A;
+  --color-accent-hover: #AD5830;
+  --color-accent-light: #F0E3D8;
+  --color-border:       #E2DBD3;
+  --color-text-inverse: #FFFFFF;
+  --color-dark-bg:      #1C1A17;
+  --color-dark-surface: #252320;
+
+  // Typography
+  --font-head: 'Unbounded', sans-serif;
+  --font-body: 'Onest', sans-serif;
+
+  --text-xs:   clamp(11px, 1.2vw, 12px);
+  --text-sm:   clamp(13px, 1.4vw, 14px);
+  --text-base: clamp(15px, 1.6vw, 16px);
+  --text-md:   clamp(16px, 1.8vw, 18px);
+  --text-lg:   clamp(18px, 2vw, 20px);
+  --text-xl:   clamp(22px, 2.5vw, 28px);
+  --text-2xl:  clamp(28px, 3.5vw, 40px);
+  --text-3xl:  clamp(36px, 5vw, 56px);
+
+  // Spacing
+  --gap:        clamp(16px, 4vw, 24px);
+  --section-py: clamp(60px, 8vw, 100px);
+
+  // Layout
+  --container:  1200px;
+
+  // Radius
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+  --radius-xl:  32px;
+
+  // Shadows
+  --shadow-sm:  0 2px 8px rgba(37, 35, 32, 0.08);
+  --shadow-md:  0 6px 24px rgba(37, 35, 32, 0.10);
+  --shadow-lg:  0 16px 48px rgba(37, 35, 32, 0.14);
+
+  // Transitions
+  --transition: 0.2s ease;
+  --transition-slow: 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition: 0s;
+    --transition-slow: 0s;
+  }
+}

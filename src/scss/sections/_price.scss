@@ -1,0 +1,128 @@
+.price {
+  background-color: var(--color-surface-alt);
+}
+
+.price__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(32px, 5vw, 64px);
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.price__content {
+  .section-subtitle {
+    margin-bottom: 28px;
+  }
+}
+
+.price__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.price__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+
+  &-icon {
+    width: 36px;
+    height: 36px;
+    background-color: var(--color-accent-light);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      color: var(--color-accent);
+    }
+  }
+
+  &-text {
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    line-height: 1.55;
+
+    strong {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+  }
+}
+
+.price__visual {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  border: 1px solid var(--color-border);
+}
+
+.price__ranges {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.price__range {
+  &-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+
+  &-name {
+    font-weight: 600;
+    font-size: var(--text-sm);
+    color: var(--color-text);
+  }
+
+  &-value {
+    font-family: var(--font-head);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+
+  &-bar-bg {
+    height: 6px;
+    background-color: var(--color-surface-alt);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  &-bar-fill {
+    height: 100%;
+    background-color: var(--color-accent);
+    border-radius: 3px;
+    transition: width var(--transition-slow);
+  }
+}
+
+.price__note {
+  margin-top: 24px;
+  padding: 14px 16px;
+  background-color: var(--color-accent-light);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-accent);
+
+  p {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    line-height: 1.55;
+  }
+}

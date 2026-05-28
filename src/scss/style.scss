@@ -1,0 +1,17 @@
+@use 'tokens';
+@use 'base';
+@use 'sections/header';
+@use 'sections/hero';
+@use 'sections/quiz';
+@use 'sections/advantages';
+@use 'sections/portfolio';
+@use 'sections/price';
+@use 'sections/stages';
+@use 'sections/reviews';
+@use 'sections/faq';
+@use 'sections/cta';
+@use 'sections/contacts';
+@use 'sections/footer';
+@use 'components/modal';
+@use 'components/cookie';
+@use 'components/scrolltop';

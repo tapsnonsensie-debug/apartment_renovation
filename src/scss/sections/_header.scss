@@ -1,0 +1,209 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(248, 245, 240, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  transition: box-shadow var(--transition);
+
+  &.is-scrolled {
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  height: 64px;
+
+  @media (min-width: 768px) {
+    height: 72px;
+  }
+}
+
+.header__logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-head);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+
+  &-mark {
+    width: 36px;
+    height: 36px;
+    background-color: var(--color-accent);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+}
+
+.header__nav {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-left: auto;
+  }
+
+  a {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    transition: color var(--transition);
+
+    &:hover {
+      color: var(--color-text);
+    }
+  }
+}
+
+.header__actions {
+  display: none;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    margin-left: 0;
+  }
+}
+
+.header__phone {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+.header__burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+
+  span {
+    display: block;
+    height: 2px;
+    background-color: var(--color-text);
+    border-radius: 2px;
+    transition: transform var(--transition), opacity var(--transition);
+    transform-origin: center;
+  }
+
+  &[aria-expanded="true"] {
+    span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    span:nth-child(2) { opacity: 0; }
+    span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  }
+}
+
+// Mobile menu
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(320px, 85vw);
+  height: 100dvh;
+  background-color: var(--color-surface);
+  z-index: 200;
+  padding: 80px var(--gap) var(--gap);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  transform: translateX(100%);
+  transition: transform var(--transition-slow);
+  overflow-y: auto;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-surface-alt);
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    a {
+      padding: 12px 0;
+      font-size: var(--text-md);
+      font-weight: 500;
+      color: var(--color-text);
+      border-bottom: 1px solid var(--color-border);
+      transition: color var(--transition);
+
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  &__phone {
+    font-family: var(--font-head);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--color-text);
+  }
+}
+
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(37, 35, 32, 0.5);
+  z-index: 190;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-slow);
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
