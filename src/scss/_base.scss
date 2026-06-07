@@ -66,8 +66,13 @@ ul {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-head);
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 .container {
@@ -173,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
 .section-subtitle {
   font-size: var(--text-md);
   color: var(--color-text-muted);
-  max-width: 600px;
+  max-width: 65ch;
   line-height: 1.6;
 }
 

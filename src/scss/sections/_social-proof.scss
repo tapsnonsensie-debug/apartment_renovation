@@ -1,0 +1,33 @@
+.social-proof {
+  padding: clamp(28px, 5vw, 48px) 0;
+  background-color: var(--color-surface-alt);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.social-proof__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(24px, 6vw, 80px);
+  text-align: center;
+}
+
+.social-proof__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.social-proof__value {
+  font-family: var(--font-head);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+.social-proof__label {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}

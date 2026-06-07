@@ -48,30 +48,6 @@
   align-items: center;
 }
 
-.hero__stats {
-  display: flex;
-  gap: clamp(20px, 4vw, 32px);
-  flex-wrap: wrap;
-  padding-top: 8px;
-  border-top: 1px solid var(--color-border);
-}
-
-.hero__stat {
-  &-value {
-    font-family: var(--font-head);
-    font-size: var(--text-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    line-height: 1.1;
-  }
-
-  &-label {
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-    margin-top: 2px;
-  }
-}
-
 .hero__visual {
   position: relative;
 
