@@ -206,7 +206,8 @@
   align-items: flex-start;
   gap: 10px;
   cursor: pointer;
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.5);
 
   input[type="checkbox"] {
@@ -216,6 +217,11 @@
     margin-top: 1px;
     accent-color: var(--color-accent);
     cursor: pointer;
+  }
+
+  strong {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
   }
 
   a {

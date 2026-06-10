@@ -210,13 +210,14 @@ export function initQuiz() {
         updateNav();
       });
       consentLabel.appendChild(consentInput);
-      const consentText = document.createTextNode(' Согласен с ');
-      const consentLink = document.createElement('a');
-      consentLink.href = '/legal/privacy.html';
-      consentLink.target = '_blank';
-      consentLink.textContent = 'политикой конфиденциальности';
+      const consentText = document.createElement('span');
+      consentText.className = 'quiz__consent-text';
+      consentText.innerHTML =
+        'Я даю согласие на обработку моих персональных данных ' +
+        '<strong>[Название компании]</strong> (ИНН <strong>[ИНН]</strong>) ' +
+        'в целях обработки заявки и обратной связи. ' +
+        'Политика конфиденциальности — <a href="/legal/privacy.html" target="_blank">по ссылке</a>.';
       consentLabel.appendChild(consentText);
-      consentLabel.appendChild(consentLink);
       wrap.appendChild(consentLabel);
 
       container.appendChild(wrap);

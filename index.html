@@ -768,7 +768,12 @@
       </div>
       <label class="form-consent">
         <input type="checkbox" name="consent" required>
-        Согласен с <a href="/legal/privacy.html" target="_blank">политикой конфиденциальности</a>
+        <span class="form-consent__text">
+          Я даю согласие на обработку моих персональных данных
+          <strong>[Название компании]</strong> (ИНН <strong>[ИНН]</strong>)
+          в целях обработки заявки и обратной связи.
+          Политика конфиденциальности — <a href="/legal/privacy.html" target="_blank">по ссылке</a>.
+        </span>
       </label>
       <div class="form-status" data-form-status aria-live="polite"></div>
       <button type="submit" class="btn btn--primary" style="width:100%" disabled>Получить расчёт</button>
@@ -778,11 +783,66 @@
 
 
 <!-- ==================== COOKIE BANNER ==================== -->
-<div class="cookie-banner" data-cookie-banner role="dialog" aria-label="Уведомление об использовании cookie">
-  <p>Мы используем файлы cookie для улучшения работы сайта. Продолжая использовать сайт, вы соглашаетесь с <a href="/legal/cookies.html">политикой cookie</a>.</p>
-  <div class="cookie-banner__actions">
-    <button class="btn btn--primary" data-cookie-accept>Принять</button>
-    <button class="btn btn--ghost" data-cookie-decline>Отклонить</button>
+<div class="cookie" data-cookie>
+  <!-- Экран 1 — основной баннер -->
+  <div class="cookie-banner" data-cookie-screen="main" role="dialog" aria-labelledby="cookie-title">
+    <h3 id="cookie-title" class="cookie-banner__title">Мы используем файлы cookie для улучшения работы сайта</h3>
+    <p class="cookie-banner__text">Подробнее — в <a href="/legal/cookies.html">Политике использования cookie</a>. Вы можете принять все или настроить категории.</p>
+    <div class="cookie-banner__actions">
+      <button class="btn btn--primary" data-cookie-action="accept-all">Принять все</button>
+      <button class="btn btn--ghost" data-cookie-action="open-settings">Настройки cookie</button>
+    </div>
+  </div>
+
+  <!-- Экран 2 — настройки категорий -->
+  <div class="cookie-settings" data-cookie-screen="settings" role="dialog" aria-labelledby="cookie-settings-title" hidden>
+    <div class="cookie-settings__head">
+      <button class="cookie-settings__back" data-cookie-action="back" aria-label="Назад">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <h3 id="cookie-settings-title" class="cookie-settings__title">Настройки cookie</h3>
+    </div>
+
+    <div class="cookie-category">
+      <div class="cookie-category__row">
+        <button class="cookie-category__toggle" aria-expanded="false" aria-controls="cc-technical">
+          <span class="cookie-category__icon" aria-hidden="true"></span>
+          <span class="cookie-category__name">Технические</span>
+        </button>
+        <span class="cookie-category__status">Всегда включены</span>
+      </div>
+      <div class="cookie-category__desc" id="cc-technical" hidden>Необходимы для работы сайта. Отключить нельзя.</div>
+    </div>
+
+    <div class="cookie-category">
+      <div class="cookie-category__row">
+        <button class="cookie-category__toggle" aria-expanded="false" aria-controls="cc-analytics">
+          <span class="cookie-category__icon" aria-hidden="true"></span>
+          <span class="cookie-category__name">Аналитические</span>
+        </button>
+        <label class="cookie-switch">
+          <input type="checkbox" data-cookie-category="analytics" aria-label="Аналитические cookie">
+          <span class="cookie-switch__slider"></span>
+        </label>
+      </div>
+      <div class="cookie-category__desc" id="cc-analytics" hidden>Помогают понять, как используется сайт (Яндекс.Метрика, GA4).</div>
+    </div>
+
+    <div class="cookie-category">
+      <div class="cookie-category__row">
+        <button class="cookie-category__toggle" aria-expanded="false" aria-controls="cc-advertising">
+          <span class="cookie-category__icon" aria-hidden="true"></span>
+          <span class="cookie-category__name">Рекламные</span>
+        </button>
+        <label class="cookie-switch">
+          <input type="checkbox" data-cookie-category="advertising" aria-label="Рекламные cookie">
+          <span class="cookie-switch__slider"></span>
+        </label>
+      </div>
+      <div class="cookie-category__desc" id="cc-advertising" hidden>Используются для таргетированной рекламы.</div>
+    </div>
+
+    <button class="btn btn--primary cookie-settings__submit" data-cookie-action="save-settings">Подтвердить</button>
   </div>
 </div>
 
