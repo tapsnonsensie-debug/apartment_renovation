@@ -4,9 +4,11 @@ export function initPortfolio() {
 
   const track = slider.querySelector('[data-portfolio-track]');
   const cards = Array.from(track?.querySelectorAll('[data-portfolio-card]') ?? []);
-  const prevBtn = slider.querySelector('[data-portfolio-prev]');
-  const nextBtn = slider.querySelector('[data-portfolio-next]');
-  const dotsContainer = slider.querySelector('[data-portfolio-dots]');
+  // Controls live outside the slider element, so query from the section scope.
+  const scope = slider.closest('.portfolio') ?? document;
+  const prevBtn = scope.querySelector('[data-portfolio-prev]');
+  const nextBtn = scope.querySelector('[data-portfolio-next]');
+  const dotsContainer = scope.querySelector('[data-portfolio-dots]');
 
   if (!track || !cards.length) return;
 
@@ -125,6 +127,12 @@ export function initPortfolio() {
   });
 
   init();
+
+  // Recompute once images/fonts have loaded so widths match final layout.
+  window.addEventListener('load', () => {
+    setCardWidths();
+    goTo(current, false);
+  });
 
   // ── Before/After toggle per card ────────────────────────────────────────
   cards.forEach(card => {

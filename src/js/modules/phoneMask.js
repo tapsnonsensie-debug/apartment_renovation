@@ -1,7 +1,7 @@
 export function applyPhoneMask(input) {
   const MASK = '+7 (___) ___-__-__';
-  // Indices of digit slots inside the mask string
-  const DIGIT_POSITIONS = [4, 5, 6, 8, 9, 10, 12, 13, 15, 16];
+  // Indices of digit slots inside the mask string '+7 (___) ___-__-__'
+  const DIGIT_POSITIONS = [4, 5, 6, 9, 10, 11, 13, 14, 16, 17];
 
   function getDigits(value) {
     return value.replace(/\D/g, '').slice(0, 10);

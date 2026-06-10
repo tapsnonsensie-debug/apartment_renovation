@@ -11,7 +11,7 @@
 
   @media (min-width: 768px) {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
   }
 }
 
@@ -80,6 +80,9 @@
 
   @media (min-width: 768px) {
     padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -108,6 +111,11 @@
   background-color: var(--color-accent-light);
   padding: 3px 10px;
   border-radius: 20px;
+
+  // Pin to bottom so all badges align across equal-height steps
+  @media (min-width: 768px) {
+    margin-top: auto;
+  }
 
   svg {
     width: 12px;
